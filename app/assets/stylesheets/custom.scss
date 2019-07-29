@@ -36,3 +36,10 @@
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: #3756f7 !important;
 }
+label.error {
+  color: red;
+  font-size: 11px;
+}
+input.error {
+  border: 2px solid #red !important;
+}

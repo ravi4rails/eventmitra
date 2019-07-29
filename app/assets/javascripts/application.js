@@ -14,5 +14,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require jquery.validate
+//= require sign_up_validation
 //= require activestorage
 //= require turbolinks
