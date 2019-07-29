@@ -23,3 +23,16 @@
   border: 2px solid #3756f7;
   color: #3756f7;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #3756f7 !important;
+  opacity: 0.5 !important; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #3756f7 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #3756f7 !important;
+}
