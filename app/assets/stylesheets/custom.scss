@@ -1,0 +1,25 @@
+.site-color {
+  color: #0f56f7 !important;
+}
+.site-form-control {
+  border: 2px solid #3756f7;
+}
+.form-control:focus {
+  border-color: #3756f7;
+  box-shadow: none;
+} 
+.font-20 {
+  font-size: 20px;
+}
+.w-sp-6 {
+  word-spacing: 6px;
+}
+.btn-site, .btn-site:hover {
+  background-color: #3756f7;
+  border: 1px solid #3756f7;
+  color: #fff;
+}
+.btn-outline-site, .btn-outline-site:hover {
+  border: 2px solid #3756f7;
+  color: #3756f7;
+}
