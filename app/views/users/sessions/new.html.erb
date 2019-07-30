@@ -1,26 +1,31 @@
-<h2>Log in</h2>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-10 mx-md-auto">
+      <div class="text-center">
+        <p class="site-color font-20 w-sp-6">HAPPY TO SEE YOU BACK !</p>
+        <p class="site-color">Let’s see how your events are doing</p>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { id: 'session_form' }) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+            <div class="form-group mb-4 mt-4">
+              <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-control site-form-control" %>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+            <div class="form-group mb-4 mt-4">
+              <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control site-form-control" %>
+            </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+            <div class="form-group text-center">
+              <%= f.submit "Sign In", class: "pl-5 pr-5 btn btn-site" %>
+              <p class="mt-3">Don't have an account? <span class="site-color"><%= link_to "Sign Up", new_user_registration_path %></span></p>
+            </div>
+          <% end %>
+        </div>
+        <%= render "partials/oauth_login" %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

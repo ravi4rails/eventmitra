@@ -46,4 +46,31 @@ $(document).ready(function(){
       $(element).parent().removeClass('has-error');
     }
   });
+
+  $("#session_form").validate({
+    rules: {
+      "user[email]": {
+        required: true,
+        email: true
+      },
+      "user[password]": {
+        required: true,
+        minlength: 6
+      }
+    },
+    messages: {
+      "user[password]": {
+        required: "PASSWORD CAN NOT BE BLANK",
+        minlength: "YOUR PASSWORD MUST BE AT LEAST 6 CHARACETRS LONG"
+      },
+      "user[email]": "PLEASE ENTER A VALID EMAIL ADDRESS"
+    }, 
+    highlight: function(element) {
+      $(element).parent().addClass('error');
+    },
+    unhighlight: function(element) {
+      $(element).parent().removeClass('error');
+    }
+  });
+
 });
