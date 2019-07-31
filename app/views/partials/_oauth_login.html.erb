@@ -4,10 +4,10 @@
 <div class="col-md-5">
   <div class="auth-btns">
     <div class="form-group mt-4 mb-4">
-      <%= link_to "Sign up with Google", "javascript:void(0)", class: "btn btn-block btn-outline-site" %>
+      <%= link_to "Sign up with Google", user_google_oauth2_omniauth_authorize_path, class: "btn btn-block btn-outline-site" %>
     </div>
     <div class="form-group mt-4 mb-4">
-      <%= link_to "Sign up with Facebook", "javascript:void(0)", class: "btn btn-block btn-outline-site" %>
+      <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-block btn-outline-site" %>
     </div>
     <p class="text-center">By continuing, you agree to Townscript's <%= link_to "terms of service", "javascript:void(0)", class: "site-color font-weight-bold" %> and <%= link_to "privacy policy", "javascript:void(0)", class: "site-color font-weight-bold" %>.</p>
   </div>

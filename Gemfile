@@ -67,3 +67,7 @@ gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'kaminari'
 gem 'font-awesome-sass', '~> 5.9.0'
+gem 'omniauth-facebook'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
