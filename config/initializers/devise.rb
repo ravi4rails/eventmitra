@@ -260,13 +260,13 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
 
-  # config.omniauth :facebook, "2437370713198064", "90da9ab299d7e2db2974058d721d04d5", callback_url: "http://localhost:3000/users/auth/facebook/callback", scope: 'email'
+  # config.omniauth :facebook, Rails.application.credentials[:facebook][:app_id], Rails.application.credentials[:facebook][:app_secret_key], callback_url: "http://localhost:3000/users/auth/facebook/callback", scope: 'email'
 
-  # config.omniauth :google_oauth2, '1046139418172-it72qlhudl2idfma4t7ma10kv4d53fpl.apps.googleusercontent.com', '049mEuun9McvE1Cir9ApdUAi',callback_url: 'http://localhost:3000/users/auth/google_oauth2/callback', scope: 'email'
+  # config.omniauth :google_oauth2, Rails.application.credentials[:google][:client_id], Rails.application.credentials[:google][:secret_key], callback_url: 'http://localhost:3000/users/auth/google_oauth2/callback', scope: 'email'
 
-  config.omniauth :facebook, "2437370713198064", "90da9ab299d7e2db2974058d721d04d5", callback_url: "https://eventmitra.herokuapp.com/users/auth/facebook/callback", scope: 'email'
+  config.omniauth :facebook, Rails.application.credentials.production[:facebook][:app_id], Rails.application.credentials.production[:facebook][:app_secret_key], callback_url: "https://eventmitra.herokuapp.com/users/auth/facebook/callback", scope: 'email'
 
-  config.omniauth :google_oauth2, '1046139418172-it72qlhudl2idfma4t7ma10kv4d53fpl.apps.googleusercontent.com', '049mEuun9McvE1Cir9ApdUAi',callback_url: 'https://eventmitra.herokuapp.com/users/auth/google_oauth2/callback', scope: 'email'
+  config.omniauth :google_oauth2, Rails.application.credentials.production[:google][:client_id], Rails.application.credentials.production[:google][:secret_key], callback_url: 'https://eventmitra.herokuapp.com/users/auth/google_oauth2/callback', scope: 'email'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
