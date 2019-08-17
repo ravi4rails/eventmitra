@@ -22,7 +22,10 @@
   <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action" do %>
     <i class="fas fa-user mr-2"></i> Profile
   <% end %>
-  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action brd-0" do %>
+  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action" do %>
     <i class="fas fa-users mr-2"></i> Team
+  <% end %>
+  <%= link_to destroy_user_session_path, method: :delete, class: "list-group-item list-group-item-action list-item-sign-out brd-0" do %>
+    <i class="fas fa-sign-out-alt mr-2"></i> Logout
   <% end %>
 </div>
