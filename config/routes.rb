@@ -8,4 +8,10 @@ Rails.application.routes.draw do
     unlocks: 'users/unlocks',
     omniauth_callbacks: 'users/omniauth_callbacks'
   }
+
+  namespace :organizer do 
+  	get "dashboard" => "sites#dashboard"
+  	resources :events
+  end
+
 end

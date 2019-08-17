@@ -1,0 +1,28 @@
+<div class="card rounded-0">
+  <div class="card-body">
+    <div class="text-center">
+      <%= image_tag "organizer.jpg", class: "rounded-circle", width: "150" %>
+      <h6 class="mt-3 font-15 font-weight-bold"><%= current_user.email %></h6>
+    </div>
+  </div>
+</div>
+<div class="list-group">
+  <%= link_to organizer_dashboard_path, class: "list-group-item list-group-item-action brd-0 bt-none" do %>
+    <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
+  <% end %>
+  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action" do %>
+    <i class="fas fa-calendar-alt mr-2"></i> Events
+  <% end %>
+  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action" do %>
+    <i class="fas fa-chart-line mr-2"></i> Reports
+  <% end %>
+  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action" do %>
+    <i class="fas fa-bullhorn mr-2"></i> Promotions
+  <% end %>
+  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action" do %>
+    <i class="fas fa-user mr-2"></i> Profile
+  <% end %>
+  <%= link_to "javascript:void(0)", class: "list-group-item list-group-item-action brd-0" do %>
+    <i class="fas fa-users mr-2"></i> Team
+  <% end %>
+</div>

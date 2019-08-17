@@ -1,25 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-default">
-  <a class="navbar-brand text-white" href="/">EventMitra</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", root_path, class: "nav-link text-white" %>
-      </li>
-      <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link text-white" %>
+<nav class="navbar navbar-expand-lg bg-purple-gradient">
+  <div class="container">
+    <a class="navbar-brand text-white" href="/">EventMitra</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link text-white" %>
         </li>
-      <% else %>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link text-white" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "SignUp", new_user_registration_path, class: "nav-link text-white" %>
+          </li>
+        <% end %>  
+      </ul>
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "SignUp", new_user_registration_path, class: "nav-link text-white" %>
-        </li>
-      <% end %>  
-    </ul>
-  </div>
+          <%= link_to "Create Event", "javascript:void(0)", class: "btn rounded-0 font-14 btn-primary"  %>
+        </li>  
+      </ul>
+    </div>
+  </div>  
 </nav>

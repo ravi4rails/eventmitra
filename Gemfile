@@ -70,4 +70,3 @@ gem 'font-awesome-sass', '~> 5.9.0'
 gem 'omniauth-facebook'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-
