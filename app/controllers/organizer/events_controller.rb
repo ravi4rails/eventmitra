@@ -8,4 +8,7 @@ class Organizer::EventsController < OrganizerController
     @event = Event.new
   end
 
+  def create
+  end
+
 end

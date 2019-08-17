@@ -14,6 +14,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
+//= require summernote/summernote-bs4.min
+//= require summernote-init
 //= require jquery.validate
 //= require sign_up_validation
 //= require activestorage
